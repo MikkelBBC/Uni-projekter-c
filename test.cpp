@@ -1,48 +1,55 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <algorithm>
+#include <iomanip>
 
 int main() {
-    // Test basic output
-    std::cout << "=== C++ Compiler Test Program ===" << std::endl;
+    std::cout << "=== C++ Setup Test Program ===" << std::endl;
     
-    // Test variables and data types
-    int number = 42;
-    double pi = 3.14159;
-    std::string message = "Hello from C++!";
-    bool isWorking = true;
+    // Test 1: Basic output
+    std::cout << "Test 1: Basic output - OK" << std::endl;
     
-    std::cout << "Integer: " << number << std::endl;
-    std::cout << "Double: " << pi << std::endl;
-    std::cout << "String: " << message << std::endl;
-    std::cout << "Boolean: " << (isWorking ? "true" : "false") << std::endl;
+    // Test 2: Variables and datatypes
+    int heltal = 42;
+    double decimaltal = 3.14159;
+    std::string tekst = "C++ virker!";
     
-    // Test STL containers
-    std::vector<int> numbers = {1, 2, 3, 4, 5};
-    std::cout << "Vector contents: ";
-    for (const int& num : numbers) {
-        std::cout << num << " ";
+    std::cout << "Test 2: Variabler - heltal: " << heltal 
+              << ", decimal: " << decimaltal 
+              << ", tekst: " << tekst << std::endl;
+    
+    // Test 3: STL containers
+    std::vector<int> tal = {1, 2, 3, 4, 5};
+    std::cout << "Test 3: STL vector - ";
+    for (int nummer : tal) {
+        std::cout << nummer << " ";
     }
     std::cout << std::endl;
     
-    // Test STL algorithms
-    auto max_element = std::max_element(numbers.begin(), numbers.end());
-    std::cout << "Maximum element: " << *max_element << std::endl;
+    // Test 4: Mathematical operations
+    double resultat = heltal * decimaltal;
+    std::cout << "Test 4: Matematik - " << heltal << " * " << decimaltal << " = " 
+              << std::fixed << std::setprecision(3) << resultat << std::endl;
     
-    // Test user input
-    std::cout << "Enter your name: ";
-    std::string name;
-    std::getline(std::cin, name);
-    std::cout << "Nice to meet you, " << name << "!" << std::endl;
+    // Test 5: User input
+    std::string navn;
+    std::cout << "Test 5: Input - Indtast dit navn: ";
+    std::getline(std::cin, navn);
+    std::cout << "Hej " << navn << "! Dit C++ setup virker perfekt!" << std::endl;
     
-    // Test mathematical operations
-    int a = 10, b = 3;
-    std::cout << "Math test: " << a << " + " << b << " = " << (a + b) << std::endl;
-    std::cout << "Math test: " << a << " / " << b << " = " << (a / b) << std::endl;
-    std::cout << "Math test: " << a << " % " << b << " = " << (a % b) << std::endl;
+    // Test 6: Compiler info
+    std::cout << "\nCompiler information:" << std::endl;
+    std::cout << "C++ standard: " << __cplusplus << std::endl;
     
-    std::cout << "C++ compiler test completed successfully!" << std::endl;
+    #ifdef __GNUC__
+        std::cout << "Compiler: GCC version " << __GNUC__ << "." << __GNUC_MINOR__ << std::endl;
+    #endif
+    
+    #ifdef _WIN32
+        std::cout << "Platform: Windows" << std::endl;
+    #endif
+    
+    std::cout << "\n=== Alle tests gennemfoert! Setup er OK! ===" << std::endl;
     
     return 0;
 }
