@@ -9,6 +9,7 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
+                
                 "-o",
                 "${fileDirname}\\build\\${fileBasenameNoExtension}.exe"  // ← Gem i build/
             ],
