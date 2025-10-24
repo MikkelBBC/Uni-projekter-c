@@ -1,4 +1,4 @@
-#include "compound_interest.h"
+#include "Compound_interest.h"
 #include <math.h>
 
 double calculateCompoundInterest(double principal, double rate, int timesCompounded, int years) {
