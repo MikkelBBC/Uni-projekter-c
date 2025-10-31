@@ -8,9 +8,9 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${workspaceFolder}/test.cpp",
-                "${workspaceFolder}/Cars/Cars.cpp",
-                "${workspaceFolder}/Cars/Cars.h",
+                "${workspaceFolder}/circular_buffer.c",
+                "${workspaceFolder}/circular_buffer.h",
+                "${workspaceFolder}/main_with_library.c",
                 "-o",
                 "${fileDirname}\\build\\${fileBasenameNoExtension}.exe"  // ← Gem i build/
             ],
