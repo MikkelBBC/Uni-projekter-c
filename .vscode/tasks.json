@@ -8,9 +8,7 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${workspaceFolder}/circular_buffer.c",
-                "${workspaceFolder}/circular_buffer.h",
-                "${workspaceFolder}/main_with_library.c",
+                "${workspaceFolder}/fugl.cpp",
                 "-o",
                 "${fileDirname}\\build\\${fileBasenameNoExtension}.exe"  // ← Gem i build/
             ],
