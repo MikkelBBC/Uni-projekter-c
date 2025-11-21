@@ -8,7 +8,7 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${workspaceFolder}/fugl.cpp",
+                "${workspaceFolder}/0.cpp",
                 "-o",
                 "${fileDirname}\\build\\${fileBasenameNoExtension}.exe"  // ← Gem i build/
             ],
