@@ -1,7 +1,7 @@
 #ifndef TERNING_H
 #define TERNING_H
 
- lass Terning {
+ Class Terning {
     private:
         int vaerdi;
     
